@@ -38,7 +38,21 @@ yarn install
 ```
 
 - install redis on Mac: `brew install redis`
-- install redis on Ubuntu: `
+
+#### 2.1 install redis on Ubuntu
+
+- last time I first did this install redis on Ubuntu: `sudo apt install redis-server -y`
+- server: kv15
+- then:
+
+```bash
+sudo apt-get install lsb-release curl gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
+```
 
 3. Set up your `.env` file with Redis configuration:
 
