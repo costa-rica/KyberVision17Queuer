@@ -22,8 +22,17 @@ var youtubeUploaderRouter = require("./routes/youtubeUploader");
 var app = express();
 
 app.use(cors());
+
 // Middleware
-app.use(logger("dev"));
+// - Disable logging for Bull Board dashboard requests
+// app.use(logger("dev"));
+app.use((req, res, next) => {
+  // Disable logging for Bull Board dashboard requests
+  if (req.path.startsWith("/dashboard")) {
+    return next();
+  }
+  return logger("dev")(req, res, next);
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
