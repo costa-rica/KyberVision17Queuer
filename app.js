@@ -15,7 +15,8 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var testJobsRouter = require("./routes/testJobs");
 var videoUploaderRouter = require("./routes/videoUploader");
-var montageVideoProcessorRouter = require("./routes/montageVideoProcessor");
+// var montageVideoProcessorRouter = require("./routes/montageVideoProcessor");
+var montageVideoMakerRouter = require("./routes/montageVideoMaker");
 var youtubeUploaderRouter = require("./routes/youtubeUploader");
 
 var app = express();
@@ -47,7 +48,8 @@ const testJobQueue = new Queue("KyberVisionTestJob03", {
 const videoUploadQueue = new Queue("KyberVisionVideoUploader03", {
   connection: redisConnection,
 });
-const montageQueue = new Queue("KyberVisionMontageVideoProcessor03", {
+// const montageQueue = new Queue("KyberVisionMontageVideoProcessor03", {
+const montageQueue = new Queue(process.env.NAME_KV_VIDEO_MONTAGE_MAKER_QUEUE, {
   connection: redisConnection,
 });
 const youtubeUploadQueue = new Queue("KyberVision15YouTubeUploader", {
@@ -76,7 +78,8 @@ app.use("/dashboard", serverAdapter.getRouter()); // This must come before other
 app.use("/users", usersRouter);
 app.use("/test-jobs", testJobsRouter);
 app.use("/video-uploader", videoUploaderRouter);
-app.use("/montage-video-processor", montageVideoProcessorRouter);
+// app.use("/montage-video-processor", montageVideoProcessorRouter);
+app.use("/video-montage-maker", montageVideoMakerRouter);
 app.use("/youtube-uploader", youtubeUploaderRouter);
 // app.use("/", indexRouter);
 module.exports = app;
