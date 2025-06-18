@@ -1,6 +1,6 @@
 # Kyber Vision Job Queuer
 
-- v 0.15.0
+- v 0.16.0
 
 ## Description
 
@@ -8,7 +8,7 @@ KyberVision16Queuer is an ExpressJS application designed to manage and monitor j
 
 The application is designed to:
 
-- Trigger jobs for connected microservices (e.g., KyberVisionTestJob03, KyberVisionVideoUpload03, KyberVisionMontageVideoProcessor03).
+- Trigger jobs for connected microservices (e.g., KyberVisionTestJob03, KyberVision16YouTubeUploader).
 - Monitor job progress and logs through a Bull Board dashboard available at `/dashboard`.
 - Ensure sequential processing of jobs to maintain order and efficiency.
 
