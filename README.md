@@ -4,7 +4,7 @@
 
 ## Description
 
-KyberVision15Queuer is an ExpressJS application designed to manage and monitor jobs using BullMQ and Bull Board. It serves as a centralized job queue manager for various microservices in the Kyber Vision ecosystem.
+KyberVision16Queuer is an ExpressJS application designed to manage and monitor jobs using BullMQ and Bull Board. It serves as a centralized job queue manager for various microservices in the Kyber Vision ecosystem.
 
 The application is designed to:
 
@@ -60,20 +60,20 @@ sudo apt-get install redis
 REDIS_HOST=127.0.0.1
 REDIS_PORT=6379
 PORT=8003
-APP_NAME=KyberVision15Queuer
+APP_NAME=KyberVision16Queuer
 PATH_TO_TEST_JOB_SERVICE=/Users/nick/Documents/KyberVisionTestJob03/
 ```
 
 #### 3.1 to run YouTube Uploader
 
 ```bash
-PATH_TO_YOUTUBE_UPLOADER_SERVICE=/Users/nick/Documents/KyberVision15YouTubeUploader/
-PATH_VIDEOS_UPLOAD03=/Users/nick/Documents/_project_resources/KyberVision15API/match_videos/upload03
+PATH_TO_YOUTUBE_UPLOADER_SERVICE=/Users/nick/Documents/KyberVision16YouTubeUploader/
+PATH_VIDEOS_UPLOAD03=/Users/nick/Documents/_project_resources/KyberVision16API/session_videos/upload03
 YOUTUBE_CLIENT_ID=someId-id.apps.googleusercontent.com
 YOUTUBE_CLIENT_SECRET=secret
 YOUTUBE_REDIRECT_URI=http://localhost
 YOUTUBE_REFRESH_TOKEN=refresh_token
-YOUTUBE_UPLOADER_QUEUE_NAME=KyberVision15YouTubeUploader
+YOUTUBE_UPLOADER_QUEUE_NAME=KyberVision16YouTubeUploader
 ```
 
 #### 3.2 connection to db
@@ -81,7 +81,7 @@ YOUTUBE_UPLOADER_QUEUE_NAME=KyberVision15YouTubeUploader
 ```bash
 NAME_DB=kv15.db
 NAME_KV_VIDEO_PROCESSOR=videoProcessor.js
-PATH_DATABASE=/Users/nick/Documents/_databases/KyberVision15API/
+PATH_DATABASE=/Users/nick/Documents/_databases/KyberVision16API/
 ```
 
 ---
@@ -174,7 +174,7 @@ These commands will help you manage the Redis server on both Mac and Ubuntu syst
 redis-server
 ```
 
-2. **Start KyberVision15Queuer Server**:
+2. **Start KyberVision16Queuer Server**:
 
 ```bash
 yarn start

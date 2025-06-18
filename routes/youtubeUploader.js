@@ -31,6 +31,10 @@ const worker = new Worker(
     // Spawn a child process to run the microservice
     const { filename, videoId } = job.data;
 
+    console.log("--- New Logging ---");
+    console.log(`filename: ${filename}`);
+    console.log(`videoId: ${videoId}`);
+
     const child = spawn(
       "node",
       ["index.js", "--filename", filename, "--videoId", videoId],

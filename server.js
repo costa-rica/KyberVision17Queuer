@@ -1,6 +1,6 @@
 const app = require("./app"); // Import the configured app
 const PORT = process.env.PORT || 8003;
-const APP_NAME = process.env.APP_NAME || "KyberVision15Queuer";
+const APP_NAME = process.env.APP_NAME || "KyberVision16Queuer";
 
 // Override console.log and console.error to include the app name
 console.log = (

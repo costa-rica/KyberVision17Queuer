@@ -61,7 +61,7 @@ const videoUploadQueue = new Queue("KyberVisionVideoUploader03", {
 const montageQueue = new Queue(process.env.NAME_KV_VIDEO_MONTAGE_MAKER_QUEUE, {
   connection: redisConnection,
 });
-const youtubeUploadQueue = new Queue("KyberVision15YouTubeUploader", {
+const youtubeUploadQueue = new Queue("KyberVision16YouTubeUploader", {
   connection: redisConnection,
 });
 
