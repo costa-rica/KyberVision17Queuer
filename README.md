@@ -54,6 +54,31 @@ sudo apt-get update
 sudo apt-get install redis
 ```
 
+#### 2.2 install update to redis on Ubuntu
+
+##### if you get this error in error log
+
+```bash
+2025-07-04 14:42 +00:00: It is highly recommended to use a minimum Redis version of 6.2.0
+2025-07-04 14:42 +00:00:              Current: 5.0.7
+```
+
+##### solution
+
+```bash
+sudo add-apt-repository ppa:redislabs/redis
+sudo apt update
+sudo apt install redis
+```
+
+- verify it worked: `redis-server --version`
+- stop and start redis:
+
+```bash
+sudo systemctl stop redis
+sudo systemctl start redis
+```
+
 3. Set up your `.env` file with Redis configuration:
 
 ```bash
