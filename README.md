@@ -111,6 +111,14 @@ PATH_DATABASE=/Users/nick/Documents/_databases/KyberVision16API/
 
 ---
 
+### Video Montage Maker
+
+- URL_LOCAL_KV_API_FOR_VIDEO_MONTAGE_MAKER is absolutely necessary for the Video Montage Maker to function. --- > the montage maker can only make requests using the local address of the API.
+
+```bash
+URL_LOCAL_KV_API_FOR_VIDEO_MONTAGE_MAKER=http://localhost:3000
+```
+
 ## Redis Commands (Mac & Ubuntu)
 
 ### Delete queue from terminal (Mac)
