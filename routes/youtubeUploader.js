@@ -5,6 +5,7 @@ const router = express.Router();
 
 const path = require("path");
 const { spawn } = require("child_process");
+const { Video } = require("kybervision16db");
 
 const redisConnection = new Redis({
   host: process.env.REDIS_HOST || "127.0.0.1",
@@ -60,8 +61,13 @@ const worker = new Worker(
     });
 
     // Capture the stderr stream (Errors from the microservice)
-    child.stderr.on("data", (data) => {
+    // child.stderr.on("data", (data) => {
+    child.stderr.on("data", async (data) => {
       console.error(`Microservice Error: ${data}`);
+      const uploadedVideo = await Video.findByPk(videoId);
+      uploadedVideo.processingFailed = true;
+      await uploadedVideo.save();
+      await job.log(`Microservice Error: ${data}`);
     });
 
     // Capture the 'close' event when the process finishes
