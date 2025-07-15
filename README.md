@@ -1,6 +1,6 @@
 # Kyber Vision Job Queuer
 
-- v 0.16.0
+- v 0.17.0
 
 ## Description
 
@@ -93,7 +93,7 @@ PATH_TO_TEST_JOB_SERVICE=/Users/nick/Documents/KyberVisionTestJob03/
 
 ```bash
 PATH_TO_YOUTUBE_UPLOADER_SERVICE=/Users/nick/Documents/KyberVision16YouTubeUploader/
-PATH_VIDEOS_UPLOAD03=/Users/nick/Documents/_project_resources/KyberVision16API/session_videos/upload03
+PATH_VIDEOS_UPLOAD03=/Users/nick/Documents/_project_resources/KyberVision17API/session_videos/upload03
 YOUTUBE_CLIENT_ID=someId-id.apps.googleusercontent.com
 YOUTUBE_CLIENT_SECRET=secret
 YOUTUBE_REDIRECT_URI=http://localhost
@@ -106,7 +106,7 @@ YOUTUBE_UPLOADER_QUEUE_NAME=KyberVision16YouTubeUploader
 ```bash
 NAME_DB=kv15.db
 NAME_KV_VIDEO_PROCESSOR=videoProcessor.js
-PATH_DATABASE=/Users/nick/Documents/_databases/KyberVision16API/
+PATH_DATABASE=/Users/nick/Documents/_databases/KyberVision17API/
 ```
 
 ---
