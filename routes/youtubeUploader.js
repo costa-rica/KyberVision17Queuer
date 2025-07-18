@@ -5,7 +5,7 @@ const router = express.Router();
 
 const path = require("path");
 const { spawn } = require("child_process");
-const { Video } = require("kybervision16db");
+const { Video } = require("kybervision17db");
 
 const redisConnection = new Redis({
   host: process.env.REDIS_HOST || "127.0.0.1",

@@ -21,7 +21,7 @@
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "ioredis": "^5.6.0",
-    "kybervision16db": "file:../KyberVision16Db",
+    "kybervision17db": "file:../KyberVision17Db",
     "morgan": "^1.10.0"
   }
 }

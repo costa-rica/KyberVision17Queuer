@@ -894,7 +894,7 @@ jsbn@1.1.0:
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-1.1.0.tgz#b01307cb29b618a1ed26ec79e911f803c4da0040"
   integrity sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==
 
-"kybervision16db@file:../KyberVision16Db":
+"kybervision17db@file:../KyberVision17Db":
   version "1.0.0"
   dependencies:
     sequelize "^6.37.6"
